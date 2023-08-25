@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Sentry Zerg Rush",
+  "description": "Zerg rush inspired Sentry easter egg",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "helloicon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.sentry.io/issues/*"],
+      "js": ["zergRush.js"]
+    }
+  ]
+}
